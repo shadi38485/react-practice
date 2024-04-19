@@ -1,8 +1,10 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({explain}) => {
+  
   return (
     <>
+    <h1>read me</h1>
       <p>
         1. Trade-in values will vary based on the condition, year, and
         configuration of your eligible trade-in device. Not all devices are
@@ -38,7 +40,7 @@ const Footer = () => {
         support.apple.com/kb/HT209218. A subscription is required for Apple TV+.
       </p>
 
-      <div class="nav-footer">
+      <div className="nav-footer">
         <ul>
           <li>Store</li>
           <li>mac</li>

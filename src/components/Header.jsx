@@ -1,10 +1,11 @@
 import React from 'react'
 import logo from "../assets/images/logo.png"
 
-const Header = () => {
+const Header = ({title}) => {
+
   return (
     <div>
-      <div class="logo-box">
+      <div className="logo-box">
         <a href="index.html">
           <img
             src={logo}
@@ -13,6 +14,7 @@ const Header = () => {
             width="40px"
           />
         </a>
+        <h1>{title}</h1>
       </div>
     </div>
   );

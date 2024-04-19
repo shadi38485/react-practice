@@ -1,0 +1,30 @@
+.ProductList {
+  display: flex;
+  /* justify-content: center;  */
+  flex-wrap: wrap;
+}
+.ProductCard {
+   width: 200px; 
+  /* height: 100px; */
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px 1px 3px rgb(45 45 45 / 10%);
+}
+
+.ProductCard img {
+  justify-content: center;
+  padding-left: 50PX;
+  margin-top: 50PX;
+  width: 50%;
+}
+.ProductCard .Product-properties {
+  padding: 15px;
+}
+.bag{
+ 
+  padding-left: 20px;
+}
+.button{
+ width: 15px;
+ height: 30px;
+ padding-left: 60px;
+}
