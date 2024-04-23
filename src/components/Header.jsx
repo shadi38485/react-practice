@@ -7,12 +7,8 @@ const Header = ({title}) => {
     <div>
       <div className="logo-box">
         <a href="index.html">
-          <img
-            src={logo}
-            alt=""
-            height="40px"
-            width="40px"
-          />
+         
+          <img src={logo} alt="" height="40px" width="40px" />
         </a>
         <h1>{title}</h1>
       </div>

@@ -1,0 +1,19 @@
+.header nav{
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    background-color: rgb(200, 200, 228);
+    
+}
+.top-nav{
+    display: flex;
+}
+
+.top-nav a {
+display: inline-block;
+text-decoration: none;
+}
+
+.top-nav a:hover{
+    text-decoration: underline;
+}

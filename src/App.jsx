@@ -1,8 +1,9 @@
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header";
-import ProductCard from "./components/ProductCard";
 import Productlist from "./components/ProductsList";
 import Footer from "./components/Footer";
+import "bootstrap-icons/font/bootstrap-icons.css"
+
 
 function App() {
   const title = "APPLE";
