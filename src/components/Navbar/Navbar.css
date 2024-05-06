@@ -1,19 +1,38 @@
-.header nav{
-    display: flex;
-    justify-content:space-around ;
-    align-items: center;
-    background-color: rgb(200, 200, 228);
-    
+.header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(200, 200, 228);
+  height: 60px;
+  position: relative;
 }
-.top-nav{
-    display: flex;
+.icons {
+  position: relative;
+  display: flex;
+  padding: 20px;
+}
+.top-nav {
+  display: flex;
 }
 
 .top-nav a {
-display: inline-block;
-text-decoration: none;
+  display: inline-flex;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  margin-right: 1rem;
+}
+.top-nav a:last-child {
+  margin-right: 0rem;
 }
 
-.top-nav a:hover{
-    text-decoration: underline;
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+.icons .login {
+  padding-right: 30px;
+}
+.totall {
+  position: relative;
+  /* padding-right: 100px; */
 }

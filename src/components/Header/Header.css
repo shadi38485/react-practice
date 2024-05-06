@@ -1,0 +1,42 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(137 131 181);
+  color: white;
+  padding: 0 1rem;
+}
+.logo-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-logo {
+  margin-left: 1rem;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.icons .login {
+  font-size: 1.5rem;
+}
+.cart-box {
+  position: relative;
+}
+.cart-box .totalQty {
+    width: 0.9rem;
+    height: 0.9rem;
+    background: white;
+    color: rgb(137 131 181);
+    font-size: 0.7rem;
+    position: absolute;
+    top: 0rem;
+    right: -11px;
+    border-radius: 50%;
+    padding: 2px;
+    display: inline-block;
+    text-align: center;
+    line-height: 0.9rem;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.css";
 
 const Footer = ({explain}) => {
   
@@ -40,7 +41,7 @@ const Footer = ({explain}) => {
         support.apple.com/kb/HT209218. A subscription is required for Apple TV+.
       </p>
 
-      <div className="nav-footer">
+      <div className="nav-Foter">
         <ul>
           <li>Store</li>
           <li>mac</li>
