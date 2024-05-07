@@ -1,9 +1,13 @@
-import React from 'react'
+ import React from 'react'
+ import ProductsList from '../components/ProductsList';
 
-const Homepage = () => {
-  return (
-    <div>Homepage</div>
-  )
-}
+ const HomePage = ({ totallQtyManagment }) => {
 
-export default Homepage
+   return (
+     <div>
+       <ProductsList totallQtyManagment={totallQtyManagment}></ProductsList>
+     </div>
+   );
+ };
+
+export default HomePage

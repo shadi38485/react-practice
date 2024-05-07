@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
-const ProductCard = ({ id, img, title, price, settotallQtyManagment }) => {
+const ProductCard = ({ id, img, title, price, totallQtyManagment }) => {
   const [qty, setQty] = useState(0);
 
   const Addtobag = () => {
     setQty(qty + 1);
-    settotallQtyManagment();
+    totallQtyManagment();
   };
 
   return (
@@ -19,7 +19,7 @@ const ProductCard = ({ id, img, title, price, settotallQtyManagment }) => {
         <button className="button" onClick={Addtobag}>
           Add to bag
         </button>
-        {qty ? <span className="bag">{qty}</span>:""}
+        {qty ? <span className="bag">{qty}</span> : ""}
       </div>
     </div>
   );

@@ -1,0 +1,68 @@
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  box-shadow: 0 0 13px 20px rgba(0, 0, 0, 0.137);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 19%;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.label-block {
+  display: block;
+  margin-bottom: 0.25rem;
+  padding: 0.25rem;
+}
+
+.input-text {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+
+  /* border-width: 2px; */
+  /* border-style: solid; */
+  /* border-color: black; */
+
+  border: 1px solid rgb(53, 42, 42);
+  /* background-color: ;
+    background-position: ;
+    background-image: ;
+    background-repeat: ;
+    background: #fff url() center no-repeat; */
+  width: 80%;
+}
+.btn {
+  background-color: rgba(65, 72, 72, 0.324);
+  color: black;
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+}
+.tik {
+  display: inline-block;
+}
+
+.radio-box {
+  display: inline-block;
+  margin-right: 1rem;
+}
+/* .input-text , #password {
+    background:  black (" ./assetes/images/eye.svg") no-repeat ;
+ } */
+
+.pass {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#icon-password{
+    position: absolute;
+    right: 17%;
+}
+.error{
+  color: red;
+}

@@ -1,18 +1,21 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
 import "./Header.css";
+import { Link } from "react-router-dom";
 const Header = ({ title, totallQty }) => {
   return (
     <header>
       <div className="logo-box">
-        <a href="index.html">
+        <Link to="/">
           <img src={logo} alt="" height="40px" width="40px" />
-        </a>
+        </Link>
         <h4 className="title-logo">{title}</h4>
       </div>
       <div className="icons">
         <div className="login">
-          <i className="bi bi-box-arrow-in-right"></i>
+          <Link to="/login">
+            <i className="bi bi-box-arrow-in-right" />
+          </Link>
         </div>
         <div className="cart-box">
           <i className="bi bi-bag"></i>
