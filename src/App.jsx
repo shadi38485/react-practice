@@ -10,11 +10,11 @@ function App() {
 
   const title = "APPLE";
   const explain = "READ ME";
-  const [totallQty, settotallQty] = useState(0);
+  const [totallQty, setTotallQty] = useState(0);
  
 
-  const settotallQtyManagment = () => {
-    settotallQty(totallQty + 1);
+  const totallQtyManagment = () => {
+    setTotallQty(totallQty + 1);
   };
 
    
@@ -25,9 +25,10 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<HomePage settotallQtyManagment={settotallQtyManagment} />}
+          element={<HomePage totallQtyManagment={totallQtyManagment} />}
         />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/404" element={<h1>404</h1>} />
       </Routes>
       <Footer Explain={explain} />
     </BrowserRouter>

@@ -1,84 +1,108 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LoginForm.css";
 
-const LoginForm = () => {
+
+  const LoginForm = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    skills: [],
+  });
+
+  const FormHandle = (e) => {
+    e.preventDefault();
+  };
+  const inputHandle =(e)=>{
+    setFormData({ ...formData ,[e.target.id]:e.target.value})
+  }
   return (
-    <form action="" class="form">
+    <form action="" className="form" onSubmit={FormHandle}>
       <h3>user info</h3>
 
-      <div class="form-group">
-        <label class="label-block" for="">
-          firstname
+      <div className="form-group">
+        <label className="label-block" htmlFor="">
+          firstName
         </label>
         <input
           type="text"
-          id="firstname"
-          placeholder="firstname"
-          class="input-text"
+          id="firstName"
+          placeholder="firstName"
+          className="input-text"
+          onChange={inputHandle}
         />
-        <div class="firstname-error error"></div>
+        <div className="firstName-error error"></div>
       </div>
 
-      <div class="form-group">
-        <label for="" class="label-block">
-          lastname
+      <div className="form-group">
+        <label htmlFor="" className="label-block">
+          LastName
         </label>
         <input
           type="text"
-          id="lastname"
-          placeholder="lastname"
-          class="input-text"
+          id="lastName"
+          placeholder="lastName"
+          className="input-text"
+          onChange={inputHandle}
         />
-        <div class="lastname-error error"></div>
+        <div className="lastName-error error"></div>
       </div>
 
-      <div class="form-group">
-        <label class="label-block" for="">
+      <div className="form-group">
+        <label className="label-block" htmlFor="">
           email
         </label>
-        <input type="email" id="email" placeholder="email" class="input-text" />
-        <div class="email-error error"></div>
+        <input
+          type="email"
+          id="email"
+          placeholder="email"
+          className="input-text"
+          onChange={inputHandle}
+        />
+        <div className="email-error error"></div>
       </div>
 
-      <div class="form-group">
-        <label class="label-block" for="">
+      <div className="form-group">
+        <label className="label-block" htmlFor="">
           password
         </label>
 
-        <div class="pass">
+        <div className="pass">
           <input
             type="password"
             id="password"
             placeholder="password"
-            class="input-text"
+            className="input-text"
+            onChange={inputHandle}
           />
-          <i class="fa-solid fa-eye" id="icon-password"></i>
+          <i className="fa-solid fa-eye" id="icon-password"></i>
         </div>
       </div>
 
-      <div class="form-group">
-        <label class="label-block" for="">
+      <div className="form-group">
+        <label className="label-block" htmlFor="">
           skills
         </label>
 
         <div>
-          <div class="radio-box">
+          <div className="radio-box">
             <input type="radio" />
-            <label for="">html</label>
+            <label htmlFor="">html</label>
           </div>
-          <div class="radio-box">
+          <div className="radio-box">
             <input type="radio" />
-            <label for="">css</label>
+            <label htmlFor="">css</label>
           </div>
-          <div class="radio-box">
+          <div className="radio-box">
             <input type="radio" />
-            <label for="">js</label>
+            <label htmlFor="">js</label>
           </div>
         </div>
       </div>
 
-      <div class="form-group">
-        <button class="submit">sing up</button>
+      <div className="form-group">
+        <button className="submit">sing up</button>
       </div>
     </form>
   );
