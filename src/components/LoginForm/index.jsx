@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import "./LoginForm.css";
 import { useNavigate } from "react-router-dom";
 
-
-
-  const LoginForm = () => {
-    const navigate =useNavigate();
+const LoginForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -13,7 +11,7 @@ import { useNavigate } from "react-router-dom";
     password: "",
     // skills: [],
   });
-  const [errors, setErrors]=useState({
+  const [errors, setErrors] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -21,18 +19,11 @@ import { useNavigate } from "react-router-dom";
     // skills: [],
   });
 
-
   const FormHandle = (e) => {
     e.preventDefault();
-    const {
-      firstName,
-      lastName,
-      email,
-      password,
-      skills,
-    } = formData;
-  
-    const errorsValue ={}
+    const { firstName, lastName, email, password, skills } = formData;
+
+    const errorsValue = {};
     if (!firstName.trim) {
       errorsValue.firstName = "firstName is required";
     }
@@ -46,43 +37,38 @@ import { useNavigate } from "react-router-dom";
       errorsValue.password = "password is required";
     }
     if (Object.keys(errorsValue).length > 0) {
-      setErrors(errorsValue)
-    }else{
+      setErrors(errorsValue);
+    } else {
       fetch("https://fakestoreapi.com/users", {
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify(formData),
-      
       })
-      
-      .then ((res)=> res.json())
-      .then ((data)=> console.log(data))
-      
-      .catch((error)=> console.log(error))
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+
+        .catch((error) => console.log(error));
       alert("ok");
-      navigate("/LoginPage")
-      
+      navigate("/LoginPage");
     }
-  }
+  };
 
-  const inputHandle =(e)=>{
-    setFormData({ ...formData ,[e.target.id]:e.target.value.trim()});
+  const inputHandle = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
+  };
 
-  
-  const checkboxHandle = (e)=>{
-      if(e.target.checked){
-        setFormData({...formData,
-          skills:[...formData.skills,e.target.value]
-        });
-        }else{
-          setFormData({
-            ...formData,
-            skills:formData.skills.filter((skill)=>
-            skill !== e.target.value)
-
-          });
-        
-    
-  }
+  const checkboxHandle = (e) => {
+    if (e.target.checked) {
+      setFormData({
+        ...formData,
+        skills: [...formData.skills, e.target.value],
+      });
+    } else {
+      setFormData({
+        ...formData,
+        skills: formData.skills.filter((skill) => skill !== e.target.value),
+      });
+    }
+  };
   return (
     <form action="" className="form" onSubmit={FormHandle}>
       <h3>user info</h3>
@@ -142,7 +128,9 @@ import { useNavigate } from "react-router-dom";
             className="input-text"
             onChange={inputHandle}
           />
-          <i className="fa-solid fa-eye" id="icon-password">{errors.password}</i>
+          <i className="fa-solid fa-eye" id="icon-password">
+            {errors.password}
+          </i>
         </div>
       </div>
 
@@ -153,17 +141,11 @@ import { useNavigate } from "react-router-dom";
 
         <div>
           <div className="radio-box">
-            <input type="radio"
-            value="html"
-            onChange={checkboxHandle}
-            />
-            <label htmlFor="">html</label >
+            <input type="radio" value="html" onChange={checkboxHandle} />
+            <label htmlFor="">html</label>
           </div>
           <div className="radio-box">
-            <input type="radio" 
-            value="css"
-            onChange={checkboxHandle}
-            />
+            <input type="radio" value="css" onChange={checkboxHandle} />
             <label htmlFor="">css</label>
           </div>
           <div className="radio-box">
@@ -178,9 +160,6 @@ import { useNavigate } from "react-router-dom";
       </div>
     </form>
   );
-}
-  }}
-  
+};
 
 export default LoginForm;
- 

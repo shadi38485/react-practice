@@ -3,8 +3,8 @@ import { useState } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
-import LoginPage from "./Pages/LoginPage";
+import HomePage from "./Pages/Homepage";
+import LoginPage from "./Pages/Loginpage";
 
 function App() {
 
